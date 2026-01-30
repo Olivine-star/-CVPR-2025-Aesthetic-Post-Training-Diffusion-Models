@@ -72,6 +72,7 @@ dataset = load_dataset("yuvalkirstain/pickapic_v1", num_proc=64)
 的
 from_disk: bool = True
 dataset_name改成本地路径即可
+/root/autodl-tmp/datasets/pickapic_v1/pickapic_v1_export
 
 启动训练（默认 4 张 A100 80GB）：
 ```bash
