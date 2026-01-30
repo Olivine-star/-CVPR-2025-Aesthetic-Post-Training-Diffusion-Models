@@ -67,6 +67,11 @@ pip install -r requirements.txt
 from datasets import load_dataset
 dataset = load_dataset("yuvalkirstain/pickapic_v1", num_proc=64)
 ```
+更改本地数据集路径：
+改step_aware_preference_model/datasetss/pick_a_pic_spm_dataset.py
+的
+from_disk: bool = True
+dataset_name改成本地路径即可
 
 启动训练（默认 4 张 A100 80GB）：
 ```bash
@@ -74,6 +79,9 @@ bash run_commands/train_spm_sd15.sh
 # 或
 bash run_commands/train_spm_sdxl.sh
 ```
+
+
+
 
 训练完成后的权重：
 - SD v1.5：`work_dirs/sdv15_spm/final_ckpt.bin`

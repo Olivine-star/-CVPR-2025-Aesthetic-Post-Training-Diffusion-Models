@@ -41,10 +41,11 @@ class ProcessorConfig:
 @dataclass
 class PickaPicSPMDatasetConfig(BaseDatasetConfig):
     _target_: str = "trainer.datasetss.pick_a_pic_spm_dataset.PickaPicSPMDataset"
+    # dataset_name: str = "yuvalkirstain/pickapic_v1"
     dataset_name: str = "yuvalkirstain/pickapic_v1"
     dataset_config_name: str = "null"
 
-    from_disk: bool = False
+    from_disk: bool = True
     train_split_name: str = "train"
     valid_split_name: str = "validation_unique"
     cache_dir: Optional[str] = None
